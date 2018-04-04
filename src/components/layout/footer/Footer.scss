@@ -1,0 +1,13 @@
+@import './../../../styles/variables.scss';
+.Footer {
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	min-height: 50px;
+	line-height: 50px;
+	background-color: $bg-primary-color;
+	color: #FFF;
+	text-align: center;
+    font-weight: 900;
+}

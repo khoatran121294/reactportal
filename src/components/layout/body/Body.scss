@@ -1,0 +1,13 @@
+.Body {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+	span {
+		font-size: 3em;
+		font-weight: 900;
+	}
+}
