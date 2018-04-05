@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import './Body.css';
+import { DEMO_REQUESTED } from "../../../actions";
 // import jQuery from 'jquery';
 
 class Body extends Component {
@@ -9,12 +10,17 @@ class Body extends Component {
     return (
       <div className="Body">
         <span>{message}</span>
+        <button className="btn btn-default" onClick={() => this.props.demoSaga()}>Dispatch Action</button>
       </div>
     );
   }
 
   componentDidMount () {
     // Test jQuery here
+  }
+  componentDidUpdate () {
+    const { post } = this.props.demo;
+    console.log(post);
   }
 }
 
@@ -24,7 +30,9 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => {
   return {
-    dispatch
+    demoSaga: () => {
+      dispatch({type: DEMO_REQUESTED})
+    }
   };
 }
 

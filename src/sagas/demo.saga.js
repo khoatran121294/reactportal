@@ -4,10 +4,14 @@ import request from "../helpers/request.helper";
 
 function* requestDemo() {
   try {
-    const post = yield call(
-      request.get.bind(request),
-      "https://jsonplaceholder.typicode.com/posts/1"
-    );
+    // const post = yield call(
+    //   request.get.bind(request),
+    //   "http://"
+    // );
+    const post = {
+      id: 1,
+      content: "this is the content of post"
+    };
     yield put({ type: DEMO_FULFILLED, post });
   } catch (e) {
     yield put({ type: DEMO_REJECTED });
