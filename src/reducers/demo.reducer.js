@@ -1,8 +1,8 @@
-import { DEMO_REQUESTED, DEMO_FULFILLED, DEMO_REJECTED } from "../actions";
+import { DEMO_REQUESTING, DEMO_FULFILLED, DEMO_REJECTED } from "../actions";
 
 const initState = {
   post: null,
-  message: 'HELLO WORLD OF REACT',
+  message: 'NO REQUEST',
   fetching: false,
   fetched: false,
   fetchFailed: false
@@ -10,19 +10,19 @@ const initState = {
 
 export default function demoReducer(state = initState, action) {
   switch (action.type) {
-    case DEMO_REQUESTED:
+    case DEMO_REQUESTING:
       return Object.assign({}, state, {
         fetching: true,
         fetched: false,
         fetchFailed: false,
-        message: 'DEMO_REQUESTED'
+        message: 'REQUESTING...'
       });
     case DEMO_FULFILLED:
       return Object.assign({}, state, {
         fetching: false,
         fetched: true,
         fetchFailed: false,
-        message: 'DEMO_FULFILLED',
+        message: 'FULFILLED',
         post: action.post
       });
     case DEMO_REJECTED:
@@ -30,7 +30,7 @@ export default function demoReducer(state = initState, action) {
         fetching: false,
         fetched: false,
         fetchFailed: true,
-        message: 'DEMO_REJECTED'
+        message: 'REJECTED'
       });
     default:
       return state;

@@ -1,5 +1,6 @@
 import { call, put, takeLatest } from "redux-saga/effects";
-import { DEMO_REQUESTED, DEMO_FULFILLED, DEMO_REJECTED } from "../actions";
+import { delay } from "redux-saga";
+import { DEMO_REQUESTING, DEMO_FULFILLED, DEMO_REJECTED } from "../actions";
 import request from "../helpers/request.helper";
 
 function* requestDemo() {
@@ -12,6 +13,7 @@ function* requestDemo() {
       id: 1,
       content: "this is the content of post"
     };
+    yield call(delay, 3000);
     yield put({ type: DEMO_FULFILLED, post });
   } catch (e) {
     yield put({ type: DEMO_REJECTED });
@@ -19,5 +21,5 @@ function* requestDemo() {
 }
 
 export function* watchDemoSagasAsync() {
-  yield [takeLatest(DEMO_REQUESTED, requestDemo)];
+  yield [takeLatest(DEMO_REQUESTING, requestDemo)];
 }
