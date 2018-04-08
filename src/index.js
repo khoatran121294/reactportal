@@ -13,7 +13,7 @@ import './libs';
 ReactDOM.render(
   <Provider store={store}>
     <IntlProvider locale="en">
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <App />
       </BrowserRouter>
     </IntlProvider>

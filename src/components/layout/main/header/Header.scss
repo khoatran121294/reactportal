@@ -1,4 +1,4 @@
-@import './../../../styles/variables.scss';
+@import './../../../../styles/variables.scss';
 .Header {
     position: absolute;
     top: 0;
@@ -7,9 +7,11 @@
     height: 50px;
     line-height: 50px;
     background-color: $bg-primary-color;
-    text-align: center;
+    text-align: left;
     font-weight: 900;
     color: #FFF;
     font-size: 18px;
     text-transform: uppercase;
+    padding-left: 20px;
+    z-index: 2;
 }

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './User.css';
+import './Login.css';
 
-class User extends Component {
+class Login extends Component {
   render() {
     return (
-      <div className="Home">
-        <h1>User Page</h1>
+      <div className="Login">
+        <h1>Login</h1>
       </div>
     );
   }
@@ -17,11 +17,10 @@ const mapStateToProps = state => {
     state
   };
 };
-
 const mapDispatchToProps = dispatch => {
   return {
     dispatch
   };
-};
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(User);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

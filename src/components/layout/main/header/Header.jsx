@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./Header.css";
-import AppConfig from "../../../config";
+import AppConfig from "../../../../config";
 
 class Header extends Component {
   render() {

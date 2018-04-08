@@ -1,0 +1,14 @@
+@import "../../../styles/variables";
+
+.MainApp {
+    position: relative;
+    font-family: $font-family-body;
+    height: 100vh;
+    .MainAppWrapper {
+        display: flex;
+        flex: 1;
+        height: 100vh;
+        position: relative;
+        margin-left: $side-bar-width;
+    }
+}

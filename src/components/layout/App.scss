@@ -1,14 +1,13 @@
 @import "../../styles/variables";
 
 .App {
-    position: relative;
     font-family: $font-family-body;
-    height: 100vh;
-    .AppWrapper {
-        display: flex;
-        flex: 1;
-        height: 100vh;
-        position: relative;
-        margin-left: $side-bar-width;
-    }
+
+    .NotFoundMessage {
+		display: flex;
+		flex: 1;
+		justify-content: center;
+		align-items: center;
+		font-size: 31px;
+	}
 }
