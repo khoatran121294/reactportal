@@ -1,7 +1,7 @@
 import { DEMO_REQUESTING, DEMO_FULFILLED, DEMO_REJECTED } from "../actions";
 
 const initState = {
-  post: null,
+  data: null,
   message: 'NO REQUEST',
   fetching: false,
   fetched: false,
@@ -23,7 +23,7 @@ export default function demoReducer(state = initState, action) {
         fetched: true,
         fetchFailed: false,
         message: 'FULFILLED',
-        post: action.post
+        data: action.data
       });
     case DEMO_REJECTED:
       return Object.assign({}, state, {

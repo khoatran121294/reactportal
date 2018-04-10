@@ -5,7 +5,7 @@ import './DemoSaga.css';
 
 class DemoSaga extends Component {
   render() {
-    const { message } = this.props.demo;
+    const { message, data } = this.props.demo;
     return (
       <div className="DemoSaga">
         <h1>Demo Saga</h1>
@@ -18,9 +18,9 @@ class DemoSaga extends Component {
     );
   }
   componentDidUpdate () {
-    const { post } = this.props.demo;
+    const { data } = this.props.demo;
     // eslint-disable-next-line
-    console.log(post);
+    console.log(data);
   }
 }
 

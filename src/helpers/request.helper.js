@@ -82,4 +82,24 @@ export default class RequestHelper {
         throw e;
       });
   }
+
+  // JUST FOR TEST EXTERNAL API
+  static async testGet(apiUrl, params) {
+    const header = await this.getHeader();
+    return instance
+      .get(apiUrl, {
+        headers: header,
+        params,
+        paramsSerializer: (params) => {
+          return qs.stringify(params, { arrayFormat: "repeat" });
+        }
+      })
+      .then((data) => {
+        return data.data;
+      })
+      .catch(e => {
+        handleError(e);
+        throw e;
+      });
+  }
 }

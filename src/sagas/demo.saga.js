@@ -5,21 +5,17 @@ import request from "../helpers/request.helper";
 
 function* requestDemo() {
   try {
-    // const post = yield call(
-    //   request.get.bind(request),
-    //   "http://"
-    // );
-    const post = {
-      id: 1,
-      content: "this is the content of post"
-    };
+    const data = yield call(
+      request.testGet.bind(request),
+      "http://cors-everywhere.herokuapp.com/http://country.io/names.json"
+    );
     yield call(delay, 3000);
-    yield put({ type: DEMO_FULFILLED, post });
+    yield put({ type: DEMO_FULFILLED, data });
   } catch (e) {
     yield put({ type: DEMO_REJECTED });
   }
 }
 
 export function* watchDemoSagasAsync() {
-  yield [takeLatest(DEMO_REQUESTING, requestDemo)];
+  yield takeLatest(DEMO_REQUESTING, requestDemo);
 }
