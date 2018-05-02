@@ -6,12 +6,15 @@ import './LeftSideBar.css';
 class LeftSideBar extends Component {
   constructor(props) {
     super(props);
+    const routeUrl = "/home";
     this.state = {
       menus: [
-        {id: 1, name: "home", to: "/home", icon: "fa fa-home", isActived: true},
-        {id: 2, name: "demo saga", to: "/home/demo-saga", icon: "fa fa-paper-plane "},
-        {id: 3, name: "demo loadable", to: "/home/demo-loadable", icon: "fa fa-refresh"},
-        {id: 4, name: "logout", to: "/login", icon: "fa fa-sign-out"}
+        {id: 1, name: "home", to: routeUrl, icon: "fa fa-home", isActived: true},
+        {id: 2, name: "demo saga", to: `${routeUrl}/demo-saga`, icon: "fa fa-paper-plane "},
+        {id: 3, name: "demo loadable", to: `${routeUrl}/demo-loadable`, icon: "fa fa-refresh"},
+        {id: 4, name: "demo gg maps", to: `${routeUrl}/demo-google-maps`, icon: "fa fa-map"},
+        {id: 5, name: "demo upload files", to: `${routeUrl}/demo-upload-files`, icon: "fa fa-cloud-upload"},
+        {id: 5, name: "logout", to: "/login", icon: "fa fa-sign-out"}
       ],
       isToggle: true
     };

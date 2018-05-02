@@ -10,4 +10,6 @@
 	+ create assets folder to store static resources such as images, fonts, logo, icon,...
 	+ refactor eslint config file, it's very difficult and hardly for starters.
 	+ use axios module instead of built-in fetch API.
+	+ integrate module google-map-react.
+	+ integrate module react-dropzone: upload multiple files simply with drap/drop or choose file normally.
 	+ ....
