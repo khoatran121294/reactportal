@@ -6,6 +6,7 @@ import DemoSaga from "../../../pages/demo-saga/DemoSaga";
 import DemoLoadable from "../../../pages/demo-loadable/DemoLoadable";
 import DemoGoogleMap from "../../../pages/demo-google-map/DemoGoogleMap";
 import DemoUploadFiles from "../../../pages/demo-upload-files/DemoUploadFiles";
+import DemoIntl from "../../../pages/demo-intl/DemoIntl";
 
 import "./Body.css";
 
@@ -20,6 +21,7 @@ class Body extends Component {
           <Route path={match.url + "/demo-loadable"} component={DemoLoadable} />
           <Route path={match.url + "/demo-google-maps"} component={DemoGoogleMap} />
           <Route path={match.url + "/demo-upload-files"} component={DemoUploadFiles} />
+          <Route path={match.url + "/demo-intl"} component={DemoIntl} />
           <Route render={() => <div className="NotFoundMessage">404 Page Not Found</div>} />
         </Switch>
       </div>

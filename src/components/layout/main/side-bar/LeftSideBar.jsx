@@ -14,7 +14,8 @@ class LeftSideBar extends Component {
         {id: 3, name: "demo loadable", to: `${routeUrl}/demo-loadable`, icon: "fa fa-refresh"},
         {id: 4, name: "demo gg maps", to: `${routeUrl}/demo-google-maps`, icon: "fa fa-map"},
         {id: 5, name: "demo upload files", to: `${routeUrl}/demo-upload-files`, icon: "fa fa-cloud-upload"},
-        {id: 5, name: "logout", to: "/login", icon: "fa fa-sign-out"}
+        {id: 6, name: "demo multilanguage", to: `${routeUrl}/demo-intl`, icon: "fa fa-globe"},
+        {id: 7, name: "logout", to: "/login", icon: "fa fa-sign-out"}
       ],
       isToggle: true
     };

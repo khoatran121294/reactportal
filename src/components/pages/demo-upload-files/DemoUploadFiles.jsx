@@ -12,14 +12,14 @@ class DemoUploadFiles extends Component {
         const FileInRow = ({file}) => (
             <li>
                 <div style={{display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center'}}>
-                    <a href={file.preview} target="_blank">{file.name} - {this.bytesToSize(file.size)}</a>
+                    <a href={file.preview} target="_blank" rel="noopener noreferrer">{file.name} - {this.bytesToSize(file.size)}</a>
                     <i className="RemoveFileIcon fa fa-times" aria-hidden="true" onClick={this.removeTempFile.bind(this, file.id)}></i>
                 </div>
             </li>
         );
         return (
             <div className="DemoUploadFiles">
-                <h1>Demo upload files using <a href="https://react-dropzone.js.org/" target="_blank">React-Dropzone</a></h1>
+                <h1>Demo upload files using <a href="https://react-dropzone.js.org/" target="_blank" rel="noopener noreferrer">React-Dropzone</a></h1>
                 <section>
                     <Dropzone
                         onDrop={this.onDrop.bind(this)}
@@ -50,8 +50,8 @@ class DemoUploadFiles extends Component {
 
     bytesToSize (bytes) {
         const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
-        if (bytes == 0) return '0 Byte';
-        const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+        if (bytes === 0) return '0 Byte';
+        const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)), 0);
         return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
     }
 

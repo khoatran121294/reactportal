@@ -5,10 +5,10 @@ import './DemoSaga.css';
 
 class DemoSaga extends Component {
   render() {
-    const { message, data } = this.props.demo;
+    const { message } = this.props.demo;
     return (
       <div className="DemoSaga">
-        <h1>Demo <a href="https://redux-saga.js.org/" target="_blank">Redux-Saga</a></h1>
+        <h1>Demo <a href="https://redux-saga.js.org/" target="_blank" rel="noopener noreferrer">Redux-Saga</a></h1>
         <h3 className="Introduction">Redux-saga is a library that aims to make application side effects (i.e. asynchronous things like data 
           fetching and impure things like accessing the browser cache) easier to manage, more efficient to execute, 
           simple to test, and better at handling failures.</h3>
