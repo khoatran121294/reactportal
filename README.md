@@ -12,4 +12,5 @@
 	+ use axios module instead of built-in fetch API.
 	+ integrate module google-map-react.
 	+ integrate module react-dropzone: upload multiple files simply with drap/drop or choose file normally.
+	+ integrate react-intl with redux (change language dynamically).
 	+ ....

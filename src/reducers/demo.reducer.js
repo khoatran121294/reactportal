@@ -1,6 +1,6 @@
 import { DEMO_REQUESTING, DEMO_FULFILLED, DEMO_REJECTED } from "../actions";
 
-const initState = {
+const initialState = {
   data: null,
   message: 'NO REQUEST',
   fetching: false,
@@ -8,7 +8,7 @@ const initState = {
   fetchFailed: false
 };
 
-export default function demoReducer(state = initState, action) {
+export default function demoReducer(state = initialState, action) {
   switch (action.type) {
     case DEMO_REQUESTING:
       return Object.assign({}, state, {

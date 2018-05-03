@@ -5,7 +5,7 @@
 export default {
   // App Details
   appName: "React Portal",
-  
+
   // ConnectionStrings
   baseUrlDev: "",
   baseUrlTest: "",
@@ -19,5 +19,12 @@ export default {
   dateDisplayFormat3: "DD/MM/YYYY",
   timeDislayFormat: "hh:mm TT",
   timeDislayFormatMoment: "hh:mm a",
-  dateSubmitFormat: "yyyy-MM-dd"
+  dateSubmitFormat: "yyyy-MM-dd",
+
+  // available languages
+  availableLanguages: [
+    { id: "en", language: "English" },
+    { id: "vi", language: "Vietnam" },
+    { id: "it", language: "Italia" }
+  ]
 };
